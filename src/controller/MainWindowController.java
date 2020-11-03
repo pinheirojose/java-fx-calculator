@@ -129,6 +129,6 @@ public class MainWindowController {
 		Double value = Double.parseDouble(display.getText());
 		
 		value = value * 0.01;
-		display.setText(df.format(value));
+		display.setText(Double.toString(value));
 	}
 }
