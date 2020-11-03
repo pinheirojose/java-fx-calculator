@@ -1,5 +1,7 @@
 package controller;
 
+import java.text.DecimalFormat;
+
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +14,7 @@ public class MainWindowController {
 	private Main main;
 	private Boolean[] operator = new Boolean[4];
 	private double[] temporary = {0,0};
+	private DecimalFormat df = new DecimalFormat("###.####");
 	
 	public void setMain(Main main) {
 		this.main = main;
@@ -78,7 +81,7 @@ public class MainWindowController {
 				display.setText(display.getText()+"0");
 				break;
 			case "comma_btn":
-				display.setText(display.getText()+",");
+				display.setText(display.getText()+".");
 				break;
 		}
 	}
@@ -110,7 +113,7 @@ public class MainWindowController {
 		else if(operator[3]) {
 			result = temporary[0] / temporary[1];
 		}
-		display.setText(Double.toString(result));
+		display.setText(df.format(result));
 	}
 	
 	public void conversion() {
@@ -118,7 +121,7 @@ public class MainWindowController {
 			Double value = Double.parseDouble(display.getText());
 			
 			value = value * -1;
-			display.setText(value.toString());
+			display.setText(df.format(value));
 		}
 	}
 	
@@ -126,6 +129,6 @@ public class MainWindowController {
 		Double value = Double.parseDouble(display.getText());
 		
 		value = value * 0.01;
-		display.setText(value.toString());
+		display.setText(df.format(value));
 	}
 }
