@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="300.0" prefWidth="250.0" style="-fx-background-color: grey;" stylesheets="@../controller/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+<AnchorPane prefHeight="300.0" prefWidth="250.0" style="-fx-background-color: grey;" stylesheets="@../view/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
    <children>
       <Label fx:id="display" alignment="CENTER_RIGHT" layoutX="105.0" layoutY="56.0" prefHeight="60.0" styleClass="display" text="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
@@ -32,25 +32,25 @@
             <RowConstraints minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="ac_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="AC" />
-            <Button fx:id="seven_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="7" GridPane.rowIndex="1" />
-            <Button fx:id="four_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="4" GridPane.rowIndex="2" />
-            <Button fx:id="conversion_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="+/-" GridPane.columnIndex="1" />
-            <Button fx:id="eight_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="five_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="one_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="1" GridPane.rowIndex="3" />
-            <Button fx:id="two_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="zero_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-            <Button fx:id="percent_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="\%" GridPane.columnIndex="2" />
-            <Button fx:id="divide_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="/" GridPane.columnIndex="3" />
-            <Button fx:id="nine_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="times_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="six_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="minus_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="three_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="plus_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="comma_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="equals_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="ac_btn" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="AC" />
+            <Button fx:id="seven_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="7" GridPane.rowIndex="1" />
+            <Button fx:id="four_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="4" GridPane.rowIndex="2" />
+            <Button fx:id="conversion_btn" mnemonicParsing="false" onAction="#conversion" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="+/-" GridPane.columnIndex="1" />
+            <Button fx:id="eight_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="five_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="one_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="1" GridPane.rowIndex="3" />
+            <Button fx:id="two_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="zero_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="164.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button fx:id="percent_btn" mnemonicParsing="false" onAction="#percent" prefHeight="50.0" prefWidth="62.0" styleClass="management" text="\%" GridPane.columnIndex="2" />
+            <Button fx:id="divide_btn" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="/" GridPane.columnIndex="3" />
+            <Button fx:id="nine_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="times_btn" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="six_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="minus_btn" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="three_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="plus_btn" mnemonicParsing="false" onAction="#operatorPressed" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="comma_btn" mnemonicParsing="false" onAction="#buttonPressed" prefHeight="50.0" prefWidth="62.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="equals_btn" mnemonicParsing="false" onAction="#result" prefHeight="50.0" prefWidth="62.0" styleClass="operator" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </children>
