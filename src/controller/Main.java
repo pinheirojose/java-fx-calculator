@@ -33,12 +33,13 @@ public class Main extends Application {
 			Scene scene = new Scene(pane);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("FxCalculator");
 			primaryStage.show();
 			
 		} 
 
 		catch (IOException e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		
 	}
