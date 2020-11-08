@@ -1,6 +1,10 @@
 # Java-Fx-Calculator
 The objective of this project is to implement a calculator with the interface made with java-fx tools. 
 
+Java-Fx Calculator was inspired in MacOs default calcultor. 
+
+Feel free to take a look in the Final Result section.
+
 ## Motivation
 Only for training purposes
 
