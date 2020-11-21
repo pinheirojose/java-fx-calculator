@@ -18,6 +18,10 @@ public class MainWindowController {
 	
 	public void setMain(Main main) {
 		this.main = main;
+		cleanOperatorArray();
+	}
+	
+	public void cleanOperatorArray() {
 		for(int i = 0; i<4;i++) {
 			operator[i] = false;
 		}
@@ -92,9 +96,7 @@ public class MainWindowController {
 		for(int i = 0; i<2;i++) {
 			temporary[i] = 0;
 		}
-		for(int i = 0; i<4;i++) {
-			operator[i] = false;
-		}
+		cleanOperatorArray();
 	}
 	
 	public void result() {
@@ -114,6 +116,7 @@ public class MainWindowController {
 			result = temporary[0] / temporary[1];
 		}
 		display.setText(df.format(result));
+		cleanOperatorArray();
 	}
 	
 	public void conversion() {
